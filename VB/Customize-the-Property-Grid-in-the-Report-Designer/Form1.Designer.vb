@@ -1,56 +1,60 @@
-﻿Namespace Customize_the_Property_Grid_in_the_Report_Designer
-	Partial Public Class Form1
-		''' <summary>
-		''' Required designer variable.
-		''' </summary>
-		Private components As System.ComponentModel.IContainer = Nothing
+Namespace Customize_the_Property_Grid_in_the_Report_Designer
 
-		''' <summary>
-		''' Clean up any resources being used.
-		''' </summary>
-		''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-			If disposing AndAlso (components IsNot Nothing) Then
-				components.Dispose()
-			End If
-			MyBase.Dispose(disposing)
-		End Sub
+    Partial Class Form1
 
-		#Region "Windows Form Designer generated code"
+        ''' <summary>
+        ''' Required designer variable.
+        ''' </summary>
+        Private components As System.ComponentModel.IContainer = Nothing
 
-		''' <summary>
-		''' Required method for Designer support - do not modify
-		''' the contents of this method with the code editor.
-		''' </summary>
-		Private Sub InitializeComponent()
-			Me.simpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-			Me.SuspendLayout()
-			' 
-			' simpleButton1
-			' 
-			Me.simpleButton1.Location = New System.Drawing.Point(127, 57)
-			Me.simpleButton1.Name = "simpleButton1"
-			Me.simpleButton1.Size = New System.Drawing.Size(117, 29)
-			Me.simpleButton1.TabIndex = 0
-			Me.simpleButton1.Text = "Run Report Designer"
-'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
-'ORIGINAL LINE: this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-			' 
-			' Form1
-			' 
-			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
-			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(366, 261)
-			Me.Controls.Add(Me.simpleButton1)
-			Me.Name = "Form1"
-			Me.Text = "Form1"
-			Me.ResumeLayout(False)
+        ''' <summary>
+        ''' Clean up any resources being used.
+        ''' </summary>
+        ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
+            End If
 
-		End Sub
+            MyBase.Dispose(disposing)
+        End Sub
 
-		#End Region
+#Region "Windows Form Designer generated code"
+        ''' <summary>
+        ''' Required method for Designer support - do not modify
+        ''' the contents of this method with the code editor.
+        ''' </summary>
+        Private Sub InitializeComponent()
+            Me.simpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+            Me.SuspendLayout()
+            ' 
+            ' simpleButton1
+            ' 
+            Me.simpleButton1.Location = New System.Drawing.Point(127, 57)
+            Me.simpleButton1.Name = "simpleButton1"
+            Me.simpleButton1.Size = New System.Drawing.Size(117, 29)
+            Me.simpleButton1.TabIndex = 0
+            Me.simpleButton1.Text = "Run Report Designer"
+             ''' Cannot convert AssignmentExpressionSyntax, System.NullReferenceException: Object reference not set to an instance of an object.
+'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
+'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+'''             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click)
+'''  ' 
+            ' Form1
+            ' 
+Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.ClientSize = New System.Drawing.Size(366, 261)
+            Me.Controls.Add(Me.simpleButton1)
+            Me.Name = "Form1"
+            Me.Text = "Form1"
+            Me.ResumeLayout(False)
+        End Sub
 
-		Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
-	End Class
+#End Region
+        Private simpleButton1 As DevExpress.XtraEditors.SimpleButton
+    End Class
 End Namespace
-
